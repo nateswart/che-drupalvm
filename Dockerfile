@@ -1,7 +1,7 @@
 FROM ubuntu
 
 RUN apt-get update && \
-    apt-get -y install git ansible
+    apt-get -y install git
     
 RUN git clone https://github.com/geerlingguy/drupal-vm.git
 
