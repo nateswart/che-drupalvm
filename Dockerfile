@@ -5,7 +5,9 @@ RUN apt-get update && \
     
 CMD git clone https://github.com/geerlingguy/drupal-vm.git
 
-CMD cp ./drupal-vm/examples/prod/prod.config.yml ./drupal-vm/config.yml
+WORKDIR /projects/drupal-vm
+
+CMD cp examples/prod/prod.config.yml config.yml
 
 EXPOSE 80 443 3306
 
