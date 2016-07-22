@@ -5,6 +5,8 @@ RUN apt-get update && \
     
 CMD git clone https://github.com/geerlingguy/drupal-vm.git
 
+CMD cp drupal-vm/examples/prod/prod.config.yml config.yml
+
 EXPOSE 80 443 3306
 
 CMD tail -f /dev/null
